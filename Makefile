@@ -1,4 +1,4 @@
-CFLAGS = -Wall -O2
+CFLAGS = -Wall -O2 -std=c11
 LDLIBS = -lpthread
 
 all: bogomips
