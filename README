@@ -1,7 +1,21 @@
-bogomips measures the speed of your CPU in the highly technical unit "millions of increments in a tight loop per second".
+# Original Description
 
-ksaj edit: Makefile was edited to compile on Raspberry Pi. 
+bogomips measures the speed of your CPU in the highly technical unit 
+"millions of increments in a tight loop per second".
 
-The rpi3 has 4 cores, and you get full results using 4 to 7 threads. Less than 4 doesnt use all the cpu so of course the results will be lower. Speed begins to degrade at 8 threads.
+# New
 
-TODO: My plan is to update the code to run on an rpi MPICH cluster. Will be testing it on my RPI3 + ClusterHAT + 4 x RPI0's.
+This version now compiles on Raspberry Pi sbc computers.
+
+## Additional Notes for RPI
+
+The rpi3 has 4 cores, and you get full results using 4 to 7 threads. 
+Less than 4 doesnt use all the cpu so of course the results will be 
+lower. Results degrade at 8 threads since at that point you are running
+redundant tests. 
+
+The next update will add MPI (currently mpich 2, but will probably
+add mpich3 as well) for use with the Raspberry Pi ClusterHAT configured
+with one Raspberry Pi 3 (B or B+) and 4 Raspberry Pi Zeros. At that 
+point, the above note will no longer apply for that sort of setup.
+
